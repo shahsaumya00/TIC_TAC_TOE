@@ -1,7 +1,9 @@
 #tab{
 	margin:0 auto;
 }
-
+#music{
+	margin:0 auto;
+}
 h1{
 color:#4CAF50;
 text-align:center;
@@ -21,5 +23,9 @@ font-weight:bold
     margin: 4px 2px;
     cursor: pointer;
     padding: 32px 32px;
-
+}
+.button:hover{
+background-color:#ffb3b3;
+border:1px solid #ffb3b3;
+color:#000000;
 }

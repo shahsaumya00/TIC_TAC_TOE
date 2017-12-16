@@ -27,16 +27,16 @@ var reply_click = function()
 	
 		if( document.getElementById(this.id).innerHTML!="O" &&  document.getElementById(this.id).innerHTML!="X")
 		{
+			count++;
 			document.getElementById(this.id).innerHTML="O";
 			change=1;
-			count++;
 		}
 		
 	if((document.getElementById('a1').innerHTML=="O" && document.getElementById('a2').innerHTML=="O" && document.getElementById('a3').innerHTML=="O") || (document.getElementById('b1').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('b3').innerHTML=="O")
 || (document.getElementById('c1').innerHTML=="O" && document.getElementById('c2').innerHTML=="O" && document.getElementById('c3').innerHTML=="O") ||
 (document.getElementById('a1').innerHTML=="O" && document.getElementById('b1').innerHTML=="O" && document.getElementById('c1').innerHTML=="O") || (document.getElementById('a2').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('c2').innerHTML=="O") || (document.getElementById('a3').innerHTML=="O" && document.getElementById('b3').innerHTML=="O" && document.getElementById('c3').innerHTML=="O") || (document.getElementById('a1').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('c3').innerHTML=="O") || (document.getElementById('a3').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('c1').innerHTML=="O"))
 		{
-			alert("O has won the game");
+			alert("O has won the game!! Press RESTART to Start a new game.");
 	//		document.getElementById('restart').style.display=block;
 			alrt=1;
 		}
@@ -44,7 +44,7 @@ else if((document.getElementById('a1').innerHTML=="X" && document.getElementById
 || (document.getElementById('c1').innerHTML=="X" && document.getElementById('c2').innerHTML=="X" && document.getElementById('c3').innerHTML=="X") ||
 (document.getElementById('a1').innerHTML=="X" && document.getElementById('b1').innerHTML=="X" && document.getElementById('c1').innerHTML=="X") || (document.getElementById('a2').innerHTML=="X" && document.getElementById('b2').innerHTML=="X" && document.getElementById('c2').innerHTML=="X") || (document.getElementById('a3').innerHTML=="X" && document.getElementById('b3').innerHTML=="X" && document.getElementById('c3').innerHTML=="X") || (document.getElementById('a1').innerHTML=="X" && document.getElementById('b2').innerHTML=="X" && document.getElementById('c3').innerHTML=="X") || (document.getElementById('a3').innerHTML=="X" && document.getElementById('b2').innerHTML=="X" && document.getElementById('c1').innerHTML=="X"))
 		{
-			alert("X has won the game");
+			alert("X has won the game!! Press RESTART to Start a new game.");
 	//		 document.getElementById('restart').style.display=block;
 			 alrt=1;
 		}
@@ -53,16 +53,16 @@ else if((document.getElementById('a1').innerHTML=="X" && document.getElementById
 	{
 		if( document.getElementById(this.id).innerHTML!="O" &&  document.getElementById(this.id).innerHTML!="X")
 		{
+			count++;
 			document.getElementById(this.id).innerHTML="X";
 			change=0;
-			 count++;
 		}
 
 		 if((document.getElementById('a1').innerHTML=="O" && document.getElementById('a2').innerHTML=="O" && document.getElementById('a3').innerHTML=="O") || (document.getElementById('b1').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('b3').innerHTML=="O")
 || (document.getElementById('c1').innerHTML=="O" && document.getElementById('c2').innerHTML=="O" && document.getElementById('c3').innerHTML=="O") ||
 (document.getElementById('a1').innerHTML=="O" && document.getElementById('b1').innerHTML=="O" && document.getElementById('c1').innerHTML=="O") || (document.getElementById('a2').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('c2').innerHTML=="O") || (document.getElementById('a3').innerHTML=="O" && document.getElementById('b3').innerHTML=="O" && document.getElementById('c3').innerHTML=="O") || (document.getElementById('a1').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('c3').innerHTML=="O") || (document.getElementById('a3').innerHTML=="O" && document.getElementById('b2').innerHTML=="O" && document.getElementById('c1').innerHTML=="O"))
                 {
-                        alert("O has won the game");
+                        alert("O has won the game!! Press RESTART to Start a new game.");
 	//		 document.getElementById('restart').style.display=block;
 			 alrt=1;
                 }
@@ -70,14 +70,14 @@ else if((document.getElementById('a1').innerHTML=="X" && document.getElementById
 || (document.getElementById('c1').innerHTML=="X" && document.getElementById('c2').innerHTML=="X" && document.getElementById('c3').innerHTML=="X") ||
 (document.getElementById('a1').innerHTML=="X" && document.getElementById('b1').innerHTML=="X" && document.getElementById('c1').innerHTML=="X") || (document.getElementById('a2').innerHTML=="X" && document.getElementById('b2').innerHTML=="X" && document.getElementById('c2').innerHTML=="X") || (document.getElementById('a3').innerHTML=="X" && document.getElementById('b3').innerHTML=="X" && document.getElementById('c3').innerHTML=="X") || (document.getElementById('a1').innerHTML=="X" && document.getElementById('b2').innerHTML=="X" && document.getElementById('c3').innerHTML=="X") || (document.getElementById('a3').innerHTML=="X" && document.getElementById('b2').innerHTML=="X" && document.getElementById('c1').innerHTML=="X"))
                 {
-                        alert("X has won the game");
+                        alert("X has won the game!! Press RESTART to Start a new game.");
 	//		 document.getElementById('restart').style.display=block;
 			 alrt=1;
                 }
 	}
 }
 
-if(count==2)
+if(count==9 && alrt==0)
 {
         alert("Tie!");
 }
@@ -99,6 +99,27 @@ document.getElementById('test').innerHTML=count;
 	document.getElementById(this.id).innerHTML="a";
 //    alert("Button clicked, id "+this.id+", text"+this.innerHTML);
 }*/
+
+//document.getElementById('restart').onclick=reset();
+
+function reset()
+{
+
+document.getElementById('a1').innerHTML=" ";
+document.getElementById('a2').innerHTML=" ";
+document.getElementById('a3').innerHTML=" ";
+document.getElementById('b1').innerHTML=" ";
+document.getElementById('b2').innerHTML=" ";
+document.getElementById('b3').innerHTML=" ";
+document.getElementById('c1').innerHTML=" ";
+document.getElementById('c2').innerHTML=" ";
+document.getElementById('c3').innerHTML=" ";
+}
+
+
+
+
+
 document.getElementById('a1').onclick = reply_click;
 document.getElementById('a2').onclick = reply_click;
 document.getElementById('a3').onclick = reply_click;
